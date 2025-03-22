@@ -7,11 +7,6 @@ const nextConfig = {
   env: {
     SITE_URL: process.env.SITE_URL || 'https://modelmanagement.com',
   },
-  output: 'export',  // Enable static exports
-  distDir: 'out',    // Output to the 'out' directory
-  images: {
-    unoptimized: true, // Required for static export
-  },
 };
 
 export default nextConfig; 

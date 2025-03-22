@@ -6,9 +6,6 @@ import {
   verifyEmailConnection 
 } from '@/utils/email';
 
-// This ensures the route is included in the static export
-export const dynamic = "force-static";
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();

@@ -65,7 +65,7 @@ export default function SignupPage() {
           className="flex justify-start"
         >
           <Link href="/" className="inline-flex items-center text-white hover:text-gray-300">
-            <Image src="/images/logo.svg" alt="Model Management" width={150} height={40} className="invert" />
+            <Image src="/images/model.logo.svg" alt="Model Management" width={150} height={40} className="invert" />
           </Link>
         </motion.div>
       </div>

@@ -43,7 +43,7 @@ export async function createTestTransporter() {
 }
 
 // Test the connection
-export async function verifyEmailConnection(transporter: nodemailer.Transporter) {
+export async function verifyEmailConnection(transporter) {
   try {
     await transporter.verify();
     console.log('Email server connection verified');
@@ -54,7 +54,7 @@ export async function verifyEmailConnection(transporter: nodemailer.Transporter)
   }
 }
 
-export async function sendNotificationToOwner(transporter: nodemailer.Transporter, subscriberEmail: string, testAccount: any) {
+export async function sendNotificationToOwner(transporter, subscriberEmail, testAccount) {
   try {
     const ownerEmail = testAccount ? testAccount.user : process.env.OWNER_EMAIL;
     
@@ -87,7 +87,7 @@ export async function sendNotificationToOwner(transporter: nodemailer.Transporte
   }
 }
 
-export async function sendConfirmationToSubscriber(transporter: nodemailer.Transporter, subscriberEmail: string, testAccount: any) {
+export async function sendConfirmationToSubscriber(transporter, subscriberEmail, testAccount) {
   try {
     const info = await transporter.sendMail({
       from: `"Model Management" <${testAccount ? testAccount.user : process.env.EMAIL_USER}>`,
