@@ -12,10 +12,6 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-  // Disable server features that aren't compatible with static export
-  experimental: {
-    appDir: true,
-  },
 };
 
 export default nextConfig; 
